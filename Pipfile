@@ -11,6 +11,7 @@ pillow = "*"
 gunicorn = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
+django-heroku = "*"
 psycopg2-binary = "*"
 
 [dev-packages]
