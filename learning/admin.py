@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from learning.models.structure import Level
+
+admin.site.register(Level)
