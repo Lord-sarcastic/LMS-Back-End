@@ -5,7 +5,4 @@ from backend.models import TrackObjectStateMixin
 
 
 class User(AbstractUser, TrackObjectStateMixin):
-    email = models.EmailField(unique=True)
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    pass
