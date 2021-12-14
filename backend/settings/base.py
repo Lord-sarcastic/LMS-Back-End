@@ -12,11 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from os import environ
 from pathlib import Path
 
-try:
-    import django_on_heroku
-except ImportError:
-    pass
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -158,8 +153,3 @@ SIMPLE_JWT = {
 DJOSER = {
     'USER_ID_FIELD': 'uuid'
 }
-
-try:
-    django_on_heroku.settings(locals())
-except:
-    pass

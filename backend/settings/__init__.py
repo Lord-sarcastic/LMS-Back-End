@@ -1,3 +1,5 @@
+import django_on_heroku
+
 from .base import *
 from .production import *
 
@@ -8,3 +10,5 @@ try:
     print(LOCALS_EXIST)
 except ImportError:
     print(LOCALS_NOT_EXIST)
+
+django_on_heroku.settings(locals())
