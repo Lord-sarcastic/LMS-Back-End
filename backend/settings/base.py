@@ -13,7 +13,7 @@ from os import environ
 from pathlib import Path
 
 try:
-    import django_heroku
+    import django_on_heroku
 except ImportError:
     pass
 
@@ -159,10 +159,7 @@ DJOSER = {
     'USER_ID_FIELD': 'uuid'
 }
 
-
-
-
 try:
-    django_heroku.settings(locals())
+    django_on_heroku.settings(locals())
 except:
     pass
