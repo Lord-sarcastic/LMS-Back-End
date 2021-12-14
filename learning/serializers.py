@@ -15,4 +15,5 @@ class ResourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Resource
         fields = "__all__"
+        exclude = ('id',)
         read_only_fields = ('uuid', 'slug')
