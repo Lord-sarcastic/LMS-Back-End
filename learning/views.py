@@ -9,7 +9,7 @@ from learning.serializers import LevelListSerializer, ResourceSerializer
 def parse_to_int(number: str) -> Optional[int]:
     try:
         number = int(number)
-    except ValueError:
+    except (ValueError, TypeError):
         number = None
     return number
 
