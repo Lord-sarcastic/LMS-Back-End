@@ -25,6 +25,7 @@ class Resource(TrackObjectStateMixin):
     title = models.CharField(max_length=64)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
     posted_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    cover = models.ImageField(upload_to='resources/cover', blank=True)
     content = models.FileField(upload_to="resources")
     description = models.TextField()
     slug = models.SlugField(max_length=128, blank=True)
