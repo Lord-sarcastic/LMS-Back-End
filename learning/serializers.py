@@ -10,7 +10,7 @@ class LevelListSerializer(serializers.ModelSerializer):
 
 
 class ResourceSerializer(serializers.ModelSerializer):
-    posted_by = serializers.SlugRelatedField(slug_field="uuid", queryset=User.objects.all())
+    posted_by = serializers.SlugRelatedField(slug_field="username", queryset=User.objects.all())
     level = serializers.SlugRelatedField(slug_field="name", queryset=Level.objects.all())
     class Meta:
         model = Resource

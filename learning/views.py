@@ -34,10 +34,10 @@ class ResourceCreateAPIView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         queryset = Resource.objects.all()
-        user_uuid = self.request.query_params.get('posted_by')
+        username = self.request.query_params.get('posted_by')
         level = parse_to_int(self.request.query_params.get('level'))
-        if user_uuid is not None:
-            queryset = queryset.filter(posted_by__uuid=user_uuid)
+        if username is not None:
+            queryset = queryset.filter(posted_by__username=username)
         if level is not None:
             queryset = queryset.filter(level__name=level)
         return queryset
