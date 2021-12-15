@@ -14,6 +14,5 @@ class ResourceSerializer(serializers.ModelSerializer):
     level = serializers.SlugRelatedField(slug_field="name", queryset=Level.objects.all())
     class Meta:
         model = Resource
-        fields = "__all__"
         exclude = ('id',)
         read_only_fields = ('uuid', 'slug')
